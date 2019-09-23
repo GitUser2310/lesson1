@@ -44,6 +44,7 @@ func main() {
 				case '\n':
 				default:
 					fmt.Println("routinID=", id, " - char(", string(rbyte), ") key=", rbyte)
+					conn.Write([]byte("...recived.\r\n"))
 				}
 			}
 		}(conn)
